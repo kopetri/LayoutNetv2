@@ -6,7 +6,7 @@ import numpy.matlib as matlib
 import scipy.signal
 from scipy.ndimage import convolve
 from scipy.ndimage import map_coordinates
-from pano_opt import optimize_cor_id
+from .pano_opt import optimize_cor_id
 
 
 def find_N_peaks(signal, prominence, distance, N=4):

@@ -6,7 +6,7 @@ import torch.nn as nn
 import numpy as np
 from torchvision import models, transforms
 import time
-import resnet_seg_ae as resnet
+import LayoutNetv2.resnet_seg_ae as resnet
 
 # Initialize and Reshape the Encoders
 def initialize_encoder(model_name, num_classes, use_pretrained=True):

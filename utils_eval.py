@@ -1,7 +1,7 @@
 import numpy as np
 from scipy.spatial import HalfspaceIntersection, ConvexHull
 
-from pano import pano_connect_points
+from .pano import pano_connect_points
 
 
 def np_coorx2u(coorx, coorW=1024):
