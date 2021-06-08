@@ -2,7 +2,7 @@ import torch
 import torch.optim as optim
 import numpy as np
 from PIL import Image
-import LayoutNetv2.pano
+import LayoutNetv2.pano as pano
 
 
 def vecang(vec1, vec2):
