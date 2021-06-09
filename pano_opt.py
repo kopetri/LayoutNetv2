@@ -154,6 +154,7 @@ def project2sphere_score(pc, pc_vec, pc_theta, pc_height, scoreedg, scorecor, i_
 def optimize_cor_id(cor_id, scoreedg, scorecor, num_iters=100, verbose=False):
     assert scoreedg.shape == (512, 1024, 3)
     assert scorecor.shape == (512, 1024)
+    assert cor_id.shape[0] >= 4
 
     Z = -1
     ceil_cor_id = cor_id[0::2]
