@@ -85,11 +85,11 @@ def constraint_cor_id_on_xy(cor_id, cor_id_xy, cor_img):
     return np.stack([col, row], axis=0).T
 
 
-def get_ini_cor(cor_img, d1=21, d2=3):
+def get_ini_cor(cor_img, gt, d1=21, d2=3):
     cor = convolve(cor_img, np.ones((d1, d1)), mode='constant', cval=0.0)
     cor_id = []
     X_loc = find_N_peaks(cor.sum(0), prominence=None,
-                         distance=20, N=4)[0]
+                         distance=20, N=gt.shape[0])[0]
     for x in X_loc:
         x_ = int(np.round(x))
 
